@@ -1,0 +1,133 @@
+/* UNIKKORN / Fizzwick Wobble: palette from the Tasty Treats Tycoon brand tokens. Self-hosted fonts only. */
+@font-face{font-family:"Lilita One";src:url("fonts/lilita-one-latin.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Fredoka";src:url("fonts/fredoka-latin.woff2") format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+
+:root{
+  --ink:#00343F; --ink-soft:#2f5760; --coral:#FF626B; --coral-deep:#C9303B; --cream:#FFF0D1; --paper:#FFFAEF;
+  --gold:#FFC533; --caramel:#8A4E04; --mint:#BCE8D8; --line:#00343F;
+  --display:"Lilita One","Arial Rounded MT Bold","Trebuchet MS",system-ui,sans-serif;
+  --ui:"Fredoka","Nunito","Segoe UI",system-ui,-apple-system,sans-serif;
+  --r:24px; --r-sm:16px; --wrap:1080px;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.65 var(--ui);overflow-wrap:break-word}
+body::before{content:"";display:block;height:10px;background:repeating-linear-gradient(135deg,var(--coral) 0 12px,var(--cream) 12px 24px)}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--ink);text-decoration-thickness:2px;text-underline-offset:3px;text-decoration-color:var(--coral)}
+a:hover{color:var(--coral-deep)}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--gold);color:var(--ink);padding:10px 16px;border:3px solid var(--ink);border-radius:12px;z-index:10;font-weight:600}
+.skip:focus{left:16px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:var(--display);font-weight:400;line-height:1.12;letter-spacing:.01em;margin:0 0 .5em;color:var(--ink)}
+h1{font-size:clamp(2.2rem,6vw,3.6rem)}
+h2{font-size:clamp(1.6rem,3.6vw,2.2rem);margin-top:0}
+h3{font-size:1.35rem}
+p{margin:0 0 1em}
+.lead{font-size:1.3rem;line-height:1.55}
+.muted{color:var(--ink-soft)}
+.small{font-size:.95rem}
+
+/* header */
+.site-header{background:var(--cream);border-bottom:3px solid var(--ink)}
+.site-header .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 24px;padding-top:12px;padding-bottom:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand img{width:auto;height:54px}
+.brand span{font-family:var(--display);font-size:1.5rem;letter-spacing:.04em;line-height:1}
+.brand small{display:block;font-family:var(--ui);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-top:4px}
+nav.main{margin-left:auto}
+nav.main ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:4px 6px;align-items:center}
+nav.main a{display:inline-block;padding:8px 14px;border-radius:999px;text-decoration:none;font-weight:500;min-height:44px;line-height:28px}
+nav.main a:hover{background:var(--paper);color:var(--ink)}
+nav.main a[aria-current="page"]{background:var(--ink);color:var(--cream)}
+nav.main a.lang{border:2px solid var(--ink);font-weight:600;margin-left:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--coral);color:var(--ink);border:3px solid var(--ink);border-radius:var(--r-sm);padding:10px 22px;min-height:50px;font:600 1.1rem/1.2 var(--ui);text-decoration:none;box-shadow:0 4px 0 var(--ink);transition:transform .1s,box-shadow .1s}
+.btn:hover{color:var(--ink);transform:translateY(-1px);box-shadow:0 5px 0 var(--ink)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 var(--ink)}
+.btn.gold{background:var(--gold)}
+.btn.ghost{background:var(--cream)}
+.btn-row{display:flex;flex-wrap:wrap;gap:14px;margin:1.4em 0 0}
+
+/* panels */
+.panel{background:var(--cream);border:3px solid var(--ink);border-radius:var(--r);padding:24px;box-shadow:0 5px 0 var(--ink)}
+.panel.white{background:#fff}
+.panel.mint{background:var(--mint)}
+.panel h2:last-child,.panel h3:last-child,.panel p:last-child{margin-bottom:0}
+
+section{padding:56px 0}
+section.tint{background:var(--cream);border-block:3px solid var(--ink)}
+.grid{display:grid;gap:24px}
+.grid.c2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.grid.c3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.kicker{display:inline-block;background:var(--gold);border:2px solid var(--ink);border-radius:999px;padding:2px 14px;font-weight:600;font-size:.95rem;margin-bottom:14px}
+
+/* hero */
+.hero{padding:48px 0 56px;background:radial-gradient(circle at 85% 20%,#fff 0,transparent 55%),var(--paper)}
+.hero .grid{align-items:center;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:40px}
+.hero img.shot{border:3px solid var(--ink);border-radius:var(--r);box-shadow:0 8px 0 var(--ink);background:var(--mint)}
+.hero h1 .accent{color:var(--coral-deep)}
+
+/* store list */
+.stores{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.stores li{display:grid;grid-template-columns:auto 1fr auto;gap:6px 18px;align-items:center;background:#fff;border:3px solid var(--ink);border-radius:var(--r-sm);padding:14px 18px}
+.stores .name{font-family:var(--display);font-size:1.3rem;grid-column:1/3;grid-row:1}
+.stores .meta{grid-column:1/-1;grid-row:2;font-size:.98rem;color:var(--ink-soft);margin:0}
+.stores .status{grid-column:3;grid-row:1;font-weight:600;font-size:.95rem;border:2px solid var(--ink);border-radius:999px;padding:3px 14px;background:var(--cream);white-space:nowrap}
+.stores .status.go{background:var(--gold)}
+.stores a.status{text-decoration:none}
+@media (max-width:560px){.stores li{grid-template-columns:1fr}.stores .name,.stores .status,.stores .meta{grid-column:1;grid-row:auto}.stores .status{justify-self:start}}
+
+/* gallery */
+.gallery{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,250px),1fr));list-style:none;margin:0;padding:0}
+.gallery a{display:block;border:3px solid var(--ink);border-radius:var(--r-sm);overflow:hidden;box-shadow:0 4px 0 var(--ink);background:var(--mint)}
+.gallery a:hover{transform:translateY(-2px)}
+.gallery img{width:100%;aspect-ratio:16/9;object-fit:cover}
+
+/* page header */
+.page-head{padding:44px 0 8px}
+.page-head p.lead{max-width:46rem}
+.breadcrumb{font-size:.95rem;color:var(--ink-soft);margin-bottom:12px}
+
+/* prose (policy pages) */
+.prose{max-width:46rem}
+.prose h2{margin-top:2.2em;font-size:1.65rem}
+.prose h3{margin-top:1.6em;font-size:1.25rem}
+.prose ul,.prose ol{padding-left:1.3em;margin:0 0 1em}
+.prose li{margin-bottom:.4em}
+.prose table{border-collapse:collapse;width:100%;margin:0 0 1.2em;font-size:1rem}
+.prose th,.prose td{border:2px solid var(--ink);padding:8px 12px;text-align:left;vertical-align:top;background:#fff}
+.prose th{background:var(--cream)}
+.tablewrap{overflow-x:auto}
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:10px 24px;margin:0 0 1.5em}
+dl.facts dt{font-weight:600}
+dl.facts dd{margin:0}
+@media (max-width:560px){dl.facts{grid-template-columns:1fr;gap:2px}dl.facts dd{margin-bottom:12px}}
+.confirm{background:var(--gold);border:2px dashed var(--ink);border-radius:8px;padding:1px 8px;font-weight:600;overflow-wrap:anywhere}
+details{background:#fff;border:3px solid var(--ink);border-radius:var(--r-sm);padding:4px 18px;margin-bottom:12px}
+details[open]{box-shadow:0 4px 0 var(--ink)}
+summary{cursor:pointer;font-weight:600;padding:12px 0;min-height:44px;list-style-position:outside}
+details p:last-child,details ul:last-child{margin-bottom:14px}
+
+/* footer */
+.site-footer{background:var(--ink);color:var(--cream);padding:44px 0 32px;margin-top:40px;border-top:10px solid var(--coral)}
+.site-footer a{color:var(--cream);text-decoration-color:var(--gold)}
+.site-footer a:hover{color:var(--gold)}
+.site-footer .cols{display:grid;gap:28px;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr))}
+.site-footer h2{font-size:1.1rem;color:var(--gold);margin-bottom:.6em;letter-spacing:.04em}
+.site-footer ul{list-style:none;padding:0;margin:0}
+.site-footer li{margin-bottom:6px}
+.site-footer address{font-style:normal}
+.site-footer .legal{margin-top:28px;padding-top:18px;border-top:1px solid #2f6670;font-size:.92rem;color:#d7e4e6}
+
+@media (max-width:640px){
+  body{font-size:1.05rem}
+  section{padding:40px 0}
+  .site-header .wrap{padding-top:10px}
+  nav.main{margin-left:0;width:100%}
+  nav.main a{padding:6px 11px;line-height:32px}
+  .brand img{height:46px}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
